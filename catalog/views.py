@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Author, Book, BookInstance
+from .models import Author, Book, BookInstance, Genre
 
 
 def index(request):
@@ -16,11 +16,15 @@ def index(request):
     # The 'all()' is implied by default.
     num_authors = Author.objects.count()
 
+    # Get
+    num_genres = Genre.objects.count()
+
     context = {
         "num_books": num_books,
         "num_instances": num_instances,
         "num_instances_available": num_instances_available,
         "num_authors": num_authors,
+        "num_genres": num_genres,
     }
 
     return render(request, "index.html", context=context)
