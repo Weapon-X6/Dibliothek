@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Dibliothek Home</h1>
+  <h1 class="text-danger">Dibliothek Home</h1>
   <p>
     Welcome to Dibliothek, a website developed with
     <em>excitement</em>!
@@ -16,7 +16,7 @@
     <li><strong>Genres:</strong> {{ num_genres }}</li>
   </ul>
 
-  <p>
+  <p class="text-secondary">
     You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.
   </p>
 {% endblock %}
