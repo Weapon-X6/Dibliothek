@@ -3,9 +3,10 @@
 {% block content %}
 
   <h1>Book List</h1>
-  <ul>
+  <br />
+  <ul  class="list-group">
     {% for book in book_list %}
-      <li>
+      <li class="list-group-item">
         <a href="{{ book.get_absolute_url }}">{{ book.title }}</a>
         ({{book.author}})
       </li>
